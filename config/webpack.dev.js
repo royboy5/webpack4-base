@@ -7,6 +7,9 @@ module.exports = merge(common, {
     devtool: 'inline-source-map',
     devServer: {
         contentBase: path.resolve(__dirname, '..', 'dist'),
-        port: 8888
+        port: 8888,
+        stats: 'errors-only',
+        open: true,
+        compress: true
     }
 })
