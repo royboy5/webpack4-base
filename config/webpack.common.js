@@ -7,11 +7,19 @@ module.exports = {
         app: path.resolve(__dirname, '..', 'src/index.js')
     },
     output: {
-        filename: '[name].bundle.js',
+        filename: './js/[name].bundle.js',
         path: path.resolve(__dirname, '..', 'dist')
     },
     module: {
         rules: [
+            // babel-loader
+            {
+                test: /\.js$/,
+                include: /src/,
+                exclude: /node_modules/,
+                loader: 'babel-loader'
+            },
+            // css-loader
             {
                 test: /\.css$/,
                 use: [
