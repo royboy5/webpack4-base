@@ -120,3 +120,6 @@ typings/
 
 # dotenv environment variables file
 .env
+
+# webpack generated build (dist) directory
+dist/
